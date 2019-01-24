@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function showModal() {
+			document.getElementById('openModal').style.display = 'block';
+		}
+
+		function CloseModal() {
+			document.getElementById('openModal').style.display = 'none';
+		}
+	</script>
+	<style>
+	.popup-contenedor {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 999;
+		display:none;
+		-webkit-transition: all .3s ease;
+		-moz-transition: all .3s ease;
+		transition: all .3s ease;
+
+	}
+	.popup-contenedor > div {
+		position: relative;
+		margin:7% auto;
+		padding:30px 50px;
+		background-color: #fafafa;
+		color:#333;
+		border-radius: 5px;
+		width:50%;
+		font-size: 1.1rem;
+		transition: all .3s ease;
+	}
+	.popup-cerrar {
+		position: absolute;
+		top:-10px;
+		right:-10px;
+		background-color: #CF1313;
+		padding:4px 8px;
+		font-size: 1.5rem;
+		text-decoration: none;
+		border-radius: 20px;
+		color:#fff;  
+		transition: all .2s ease;
+	}
+	a.popup-cerrar:hover {
+		background-color: #D64B4B;
+		transition: all .2s ease;
+	}
+
+</style>
+</head>
+<body>
+	<a href="#" onclick="javascript:showModal();">Ventana</a>
+	<div id="openModal" class="popup-contenedor">
+		<div>
+			<a href="#close" title="Close" class="popup-cerrar" onclick="javascript:CloseModal();">X</a>
+			<h2>Titulo</h2>
+			<p>Ventana creada con JS y CSS.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore deleniti adipisci architecto dicta, fugit sapiente vero dolorem maiores quas, quidem earum recusandae! Veniam accusamus ea ipsum corrupti eveniet, nostrum nemo?</p>
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -83,7 +83,7 @@ section {
 	width: 100%;
 	text-align: center;
 }
- table {
+table {
 	width: 100%;
 	text-align: left;
 } 
@@ -222,21 +222,21 @@ a.popup-cerrar:hover {
 @media (max-width: 1199px) {
 	.container { 
 		width: 100%;
-	 }
+	}
 }
 /* NETBOOKS */
 @media (max-width: 991px) {
 	.container { 
 		width: 100%;
-	 }
+	}
 }
 /* TABLETS */
 @media (max-width: 782px) {
 	.container { 
 		width: 100%;
-	 }
-	 .contentBody {
-	 	margin-top: 185px;
+	}
+	.contentBody {
+		margin-top: 185px;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 3fr 1fr;
 		row-gap:0;
@@ -263,21 +263,21 @@ a.popup-cerrar:hover {
 		z-index: 999;
 	}
 	.izq, .derch{
-	height: 135px;
-	margin-top: 10px;
+		height: 135px;
+		margin-top: 10px;
 	}
 	/* Footer al final */
 	footer {
-	position: relative;
+		position: relative;
 	}
 }
 /* SMART PHONES */
 @media (max-width: 574px) {
 	.cabecera{
-	height: 100px;
+		height: 100px;
 	}
 	.contentBody {
-	 	margin-top: 147px;
+		margin-top: 147px;
 	}
 	.izq{
 		margin: 0;
