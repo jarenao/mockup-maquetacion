@@ -1,2 +1,2 @@
 # Mockup maquetación
-Ejercicio de maquetación responsiv con popup Css o Js.
+Ejercicio de maquetación responsive con popup de Css y Js.
