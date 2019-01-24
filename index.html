@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="css/estilo.css">
 
 	<!-- JS -->
-	<link rel="stylesheet" href="js/mockup.js">
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -68,7 +67,7 @@
 							<tr>
 								<td>Text</td>
 								<td>Text</td>
-								<td><a href="#">Text</a></td>
+								<td><a href="#" onclick="showModal();">JS</a></td>
 							</tr>
 							<tr>
 								<td>Text</td>
@@ -113,6 +112,16 @@
 						<a class="popup-cerrar" href="#">X</a>
 					</div>
 				</div>
+
+				<div id="window" class="ventana">
+					<div>
+						<a href="#close" title="Close" class="ventana-cerrar" onclick="javascript:CloseModal();">X</a>
+						<h2>Titulo</h2>
+						<p>Ventana creada con JS y CSS.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore deleniti adipisci architecto dicta, fugit sapiente vero dolorem maiores quas, quidem earum recusandae! Veniam accusamus ea ipsum corrupti eveniet, nostrum nemo?</p>
+
+					</div>
+				</div>
 			</section>
 
 			<!-- CONTENT DERCH -->
@@ -136,6 +145,14 @@
 	</div>
 	
 	<!-- Scripts -->
+	<script>
+		function showModal() {
+			document.getElementById('window').style.display = 'block';
+		}
+		function CloseModal() {
+			document.getElementById('window').style.display = 'none';
+		}
+	</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </body>
 </html>
