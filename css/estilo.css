@@ -65,7 +65,7 @@ ul li {
 /* CONTENIDO */
 .contentBody {
 	display: grid;
-	grid-template-columns: 1.5fr 9fr 1.5fr;
+	grid-template-columns: 1fr 5fr 1fr;
 	column-gap:10px ;
 	min-height: 100%;
 	margin: 0 8px;
@@ -73,7 +73,7 @@ ul li {
 
 /* LATERALES */
 .izq, .derch{
-	height: 500px;
+	height: 780px;
 	background-color: #999;
 	margin-top: 10px;
 }
@@ -86,6 +86,7 @@ section {
 .tablaContent {
 	width: 100%;
 	text-align: center;
+	padding-bottom: 60px;
 }
 table {
 	width: 100%;
@@ -164,14 +165,14 @@ footer {
 	transition: all .2s ease;
 }
 
-/* VENTANA EMERGENTE */
-#popup {
+/* VENTANAS EMERGENTES */
+div[id*="popup"] {
 	visibility: hidden;
 	opacity: 0;
 	margin-top: -300px;
 	position: absolute;
 }
-#popup:target {
+div[id*="popup"]:target	{
 	visibility:visible;
 	opacity: 1;
 	background-color: rgba(0,0,0,0.8);
@@ -183,16 +184,18 @@ footer {
 	margin:0;
 	z-index: 999;
 	transition:all .2s ease;
+	text-align: center;
 }
 .popup-contenedor {
 	position: relative;
-	margin:7% auto;
-	padding:30px 50px;
+	margin: 4% auto;
+	padding:12px 40px;
 	background-color: #fafafa;
 	color:#333;
 	border-radius: 5px;
 	width:50%;
 	font-size: 1.1rem;
+	text-align: left;
 }
 a.popup-cerrar {
 	position: absolute;
@@ -211,7 +214,8 @@ a.popup-cerrar:hover {
 	transition: all .2s ease;
 }
 .ventana {
-	position: fixed;
+	width: 100%;
+	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -223,39 +227,22 @@ a.popup-cerrar:hover {
 	-moz-transition: all .2s ease;
 	transition: all .2s ease;
 }
-.ventana >.ventana-pop {
-	position: relative;
-	margin:7% auto;
-	padding:30px 50px;
-	background-color: #fafafa;
-	color:#333;
-	border-radius: 5px;
-	width:50%;
-	font-size: 1.1rem;
-	-webkit-transition: all .2s ease;
-	-moz-transition: all .2s ease;
-	transition: all .2s ease;
+
+/* TEXTO DENTRO DE VENTANAS */
+div .popup-contenedor h2, div .popup-contenedor p { margin-bottom: 1rem; line-height: 1.5rem;}
+.popup-contenedor h2 {
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	font-weight: 900;
+	background: #666;
+	padding: 10px;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 0px solid #000000;
 }
-.ventana-cerrar {
-	position: absolute;
-	top:-10px;
-	right:-10px;
-	background-color: #CF1313;
-	padding:4px 8px;
-	font-size: 1.5rem;
-	text-decoration: none;
-	border-radius: 20px;
-	color:#fff;
-	-webkit-transition: all .2s ease;
-	-moz-transition: all .2s ease;  
-	transition: all .2s ease;
-}
-a.ventana-cerrar:hover {
-	background-color: #D64B4B;
-	-webkit-transition: all .2s ease;
-	-moz-transition: all .2s ease;
-	transition: all .2s ease;
-}
+.popup-contenedor p:first-child { font-weight: 900; }
 
 /* SOMBRA TABLA */
 .sombra, td a {
@@ -309,6 +296,9 @@ a.ventana-cerrar:hover {
 	.menu ul li a {
 		text-align: center;
 		border: none;
+	}
+	.tablaContent {
+		padding-bottom: 0;
 	}
 	/* Cabecera Fija */
 	.contentHeader {
